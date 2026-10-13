@@ -1,31 +1,41 @@
 # Reflektion — Inlämning 1
 
-**Namn:** [Ditt namn]  
-**Datum:** [Datum]
+**Namn:** Max Svensson 
+**Datum:** 2026-10-13
 
 ---
 
 ## Vad var svårast?
 
-[Skriv här]
+definitivt VG delen med many-to-many\
+veta vad jag ville ha för kolumner i mina tabeller
+
 
 ---
 
 ## Vad lärde du dig?
 
 1. Att varchar sparar utrymme (dynamiskt) istället för char som tar fast minne. så varchar(100) sätter en gräns på 100 tecken\
-men använder bara 3 om det skulle stå "Hej".
+men använder bara 3 om det skulle stå "Hej". Detta lärde jag mig genom att string inte är en korrekt format
 2. Values skrivs bara en gång som alla nyckelord. Skrev först VALUES album1 sen VALUES album2 vilket inte var rätt.
-3. 
+3. Att "AS" i tex. Från Query 3, SELECT album_id, COUNT(song_name) AS total_songs. Döper om titeln från COUNT(song_name) till total_songs för renlighet
+4. (DMBL) Sammansatt primärnyckel (Composite Primary Key) flera nycklar slås ihop och blir en unik nyckel
+5. hur man lägger till bilder
+6. att DESC inte finns i GROUP BY utan ORDER BY
+7. LIMIT
 
 ---
 
 ## Hur använde du SQL i praktiken — vad kändes naturligt och vad var förvirrande?
 
-[Skriv här]
+det som kändes naturligt var att jag näst in till visste exakt vad jag ville skriva för att få ut rätt information till\
+alla querys som var listade i inlämningen. SQLZoo var till stor nytta.
+
+det som var mest förvirrande och huvudvärk var hela many-to-many delen och att ibland så skrev jag fel i https://sqliteonline.com/
+där jag skapade en temporär databas för att säkerhetställa att mina kommandon gjorde det dem skulle.
 
 ---
 
 ## Om du hade mer tid — vad hade du lagt till eller gjort annorlunda?
 
-[Skriv här]
+tycker att jag har gjort det jag kan... och gjorde min tabell utan att tänka på normalisering från början.
