@@ -27,8 +27,8 @@ Välj en artist du faktiskt gillar — det märks om du bryr dig.
 
 ### G — Godkänt
 
-- [ ] Minst 3 tabeller med primary keys och foreign keys
-- [ ] Minst 3 album med minst 3 låtar vardera
+- [x] Minst 3 tabeller med primary keys och foreign keys
+- [x] Minst 3 album med minst 3 låtar vardera
 - [ ] Normaliserad till minst 3NF
 - [ ] Databasen är skapad med CREATE TABLE
 - [ ] Data är inlagt med INSERT

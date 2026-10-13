@@ -73,6 +73,19 @@ VALUES (1, 1, '2014 Forest Hills Drive', 2014, 1, 'https://upload.wikimedia.org/
        (2, 1, 'Might Delete Later', 2024, 2, 'https://upload.wikimedia.org/wikipedia/en/2/22/J._Cole_-_Might_Delete_Later.png'),
        (3, 1, 'Born Sinner', 2013, 3, 'https://upload.wikimedia.org/wikipedia/en/7/73/J._Cole_-_Born_Sinner_cover.png');
 
+INSERT INTO songs (song_id, album_id, song_name, track_number, duration_seconds, is_single)
+VALUES (1, 1, 'Wet Dreamz', 3, 239, TRUE),
+       (2, 1, '03'' Adolescence', 4, 264, FALSE),
+       (3, 1, 'Fire Squad', 6, 288, FALSE),
+       (4, 1, 'No Role Modelz', 9, 292, TRUE),
+       (5, 1, 'Love Yourz', 11, 211, FALSE),
+       (6, 2, 'Huntin Wabbitz', 4, 163, FALSE),
+       (7, 2, 'H.Y.B. (feat. Bas & Central Cee)', 5, 233, TRUE),
+       (8, 2, 'Trae the Truth in Ibiza', 10, 255, FALSE),
+       (9, 3, 'Power Trip (feat. Miguel)', 4, 241, TRUE),
+       (10, 3, 'She Knows (feat. Amber Coffman & Cults)', 8, 297, TRUE),
+       (11, 3, 'Rich Niggaz', 9, 276, FALSE);
+
 ```
 
 ---
