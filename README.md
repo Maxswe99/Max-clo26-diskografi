@@ -29,9 +29,9 @@ Välj en artist du faktiskt gillar — det märks om du bryr dig.
 
 - [x] Minst 3 tabeller med primary keys och foreign keys
 - [x] Minst 3 album med minst 3 låtar vardera
-- [ ] Normaliserad till minst 3NF
-- [ ] Databasen är skapad med CREATE TABLE
-- [ ] Data är inlagt med INSERT
+- [x] Normaliserad till minst 3NF
+- [x] Databasen är skapad med CREATE TABLE
+- [x] Data är inlagt med INSERT
 - [ ] Du kan söka med SELECT och WHERE
 - [ ] Du har lagt till minst en ny rad med INSERT
 - [ ] Du har tagit bort minst en rad med DELETE

@@ -26,8 +26,8 @@ CREATE TABLE artist (
 );
 
 CREATE TABLE genre (
-                       genre_id INTEGER NOT NULL PRIMARY KEY,
-                       genre VARCHAR(50)
+                        genre_id INTEGER NOT NULL PRIMARY KEY,
+                        genre VARCHAR(50)
 );
 
 CREATE TABLE albums (
@@ -42,13 +42,13 @@ CREATE TABLE albums (
 );
 
 CREATE TABLE songs (
-                       song_id INTEGER NOT NULL PRIMARY KEY,
-                       album_id INTEGER,
-                       song_name VARCHAR(255),
-                       track_number INTEGER,
-                       duration_seconds INTEGER,
-                       is_single BOOLEAN,
-                       FOREIGN KEY (album_id) REFERENCES albums(album_id)
+                        song_id INTEGER NOT NULL PRIMARY KEY,
+                        album_id INTEGER,
+                        song_name VARCHAR(255),
+                        track_number INTEGER,
+                        duration_seconds INTEGER,
+                        is_single BOOLEAN,
+                        FOREIGN KEY (album_id) REFERENCES albums(album_id)
 );
 
 ```
@@ -95,14 +95,22 @@ VALUES (1, 1, 'Wet Dreamz', 3, 239, TRUE),
 ```sql
 --- query 1: Lista alla album, sorterade efter år ---
 
+SELECT album_name, release_date FROM albums
+ORDER BY release_date
 
 --- query 2: Lista alla låtar på ett specifikt album ---
 
+SELECT song_name FROM songs
+JOIN albums ON songs.album_id = albums.album_id
+WHERE songs.album_id = '1'
 
 --- query 3: Antal låtar per album ---
 
+SELECT COUNT(song_name), album_id FROM songs
+GROUP BY album_id
 
 --- query 4: Längsta låten ---
+
 
 
 --- query 5: Alla låtar sorterade alfabetiskt ---
