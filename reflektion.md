@@ -46,3 +46,15 @@ där jag skapade en temporär databas för att säkerhetställa att mina kommand
 ## Om du hade mer tid — vad hade du lagt till eller gjort annorlunda?
 
 tycker att jag har gjort det jag kan... och gjorde min tabell utan att tänka på normalisering från början.
+
+## (VG) Varför valde du just den här tabellstrukturen?
+
+Resonera kring ditt designval: Vad hade hänt om du löst det på ett annat sätt? Vilka för- och nackdelar ser du med din lösning jämfört med ett alternativ?
+
+jag delade upp datan i separata tabeller (songs, albums, artists, genre och song_artists) och kopplade ihop dem med foreign keys.
+
+hade jag inte gjorde det utan tryckt in allt i en stor tabell bryter jag mot normaliseringen NF och behöver upprepa koden flertal gånger
+nackdelarna hade blivit redundans, uppdateringsfel att jag behöver ändra på flertal ställen
+
+fördelarna med min kod är att ingen onödig upprepning, följer normaliseringen och redundans.
+kopplings tabellen song_artist gör att en låt ha flera artister
