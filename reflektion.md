@@ -16,7 +16,7 @@ veta vad jag ville ha för kolumner i mina tabeller
 ## Vad lärde du dig?
 
 1. Att varchar sparar utrymme (dynamiskt) istället för char som tar fast minne. så varchar(100) sätter en gräns på 100 tecken\
-men använder bara 3 om det skulle stå "Hej". Detta lärde jag mig genom att string inte är en korrekt format
+men använder bara 3 om det skulle stå "Hej". Detta lärde jag mig genom att string inte är ett korrekt format
 2. Values skrivs bara en gång som alla nyckelord. Skrev först VALUES album1 sen VALUES album2 vilket inte var rätt.
 3. Att "AS" i tex. Från Query 3, SELECT album_id, COUNT(song_name) AS total_songs. Döper om titeln från COUNT(song_name) till total_songs för renlighet
 4. (DMBL) Sammansatt primärnyckel (Composite Primary Key) flera nycklar slås ihop och blir en unik nyckel
