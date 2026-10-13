@@ -111,8 +111,6 @@ INSERT INTO song_artists (song_id, artist_id, role)
 VALUES (7, 1, 'Main Artist'),  -- J. Cole
        (7, 2, 'Featured');     -- Central Cee
 
--- vi har many-to-many för att kunna slå ihop nycklar till en unik nyckel för att kunna separera vem som gör vad i en låt.
--- den länkar till både artist och låt id. den hindrar också att det blir dubbletter av samma artist eller låt. en artist kan ha flera låtar eller tvärtom
 ```
 
 ---

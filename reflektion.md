@@ -10,6 +10,13 @@
 definitivt VG delen med many-to-many\
 veta vad jag ville ha för kolumner i mina tabeller
 
+## Förklaringar
+vi har many-to-many för att kunna slå ihop nycklar till en unik nyckel för att kunna separera vem som gör vad i en låt.\
+den länkar till både artist och låt id. den hindrar också att det blir dubbletter av samma artist eller låt. en artist kan ha flera låtar eller tvärtom
+
+join är att systemet kan hämta information från flera tabeller som är sammanslagna med join commandot. utan det så vet inte systemet vilken information man letar efter
+
+min tabellstruktur har i åtanke med normalisering och redundans. behöver inte upprepa utan kan ändra enskilda rader för ändringar
 
 ---
 
