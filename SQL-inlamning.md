@@ -1,8 +1,8 @@
 # SQL-inlämning — Diskografi
 
-**Namn:** [Ditt namn]  
-**Artist:** [Din valda artist]  
-**Datum:** [Datum]
+**Namn:** Max Svensson
+**Artist:** Joey Bada$$
+**Datum:** 2026-10-13
 
 ---
 
@@ -16,6 +16,41 @@
 ```sql
 --- skriv din SQL-kod här ---
 
+CREATE TABLE artist (
+                        artist_id INTEGER NOT NULL PRIMARY KEY,
+                        first_name VARCHAR(50),
+                        last_name VARCHAR(50),
+                        stage_name VARCHAR(50),
+                        origin VARCHAR(50),
+                        active_since INTEGER
+);
+
+CREATE TABLE genre (
+                       genre_id INTEGER NOT NULL PRIMARY KEY,
+                       genre VARCHAR(50)
+);
+
+CREATE TABLE albums (
+                        album_id INTEGER NOT NULL PRIMARY KEY,
+                        artist_id INTEGER,
+                        album_name VARCHAR(255),
+                        release_date INTEGER,
+                        genre_id INTEGER,
+                        cover_image_url VARCHAR(500),
+                        FOREIGN KEY (artist_id) REFERENCES artist(artist_id),
+                        FOREIGN KEY (genre_id) REFERENCES genre(genre_id)
+);
+
+CREATE TABLE songs (
+                       song_id INTEGER NOT NULL PRIMARY KEY,
+                       album_id INTEGER,
+                       song_name VARCHAR(255),
+                       track_number INTEGER,
+                       duration_seconds INTEGER,
+                       is_single BOOLEAN,
+                       FOREIGN KEY (album_id) REFERENCES albums(album_id)
+);
+
 ```
 
 ---
@@ -24,6 +59,19 @@
 
 ```sql
 --- skriv din SQL-kod här ---
+
+INSERT INTO artist (artist_id, first_name, last_name, stage_name, origin, active_since)
+VALUES (1, 'Jermaine', 'Cole', 'J. Cole', 'Fayetteville, North Carolina', 2007);
+
+INSERT INTO genre (genre_id, genre)
+VALUES (1, 'Hip-Hop'),
+       (2, 'East Coast Hip-Hop'),
+       (3, 'Conscious Hip-Hop');
+
+INSERT INTO albums (album_id, artist_id, album_name, release_date, genre_id, cover_image_url)
+VALUES (1, 1, '2014 Forest Hills Drive', 2014, 1, 'https://upload.wikimedia.org/wikipedia/en/2/2a/2014ForestHillsDrive.jpg'),
+       (2, 1, 'Might Delete Later', 2024, 2, 'https://upload.wikimedia.org/wikipedia/en/2/22/J._Cole_-_Might_Delete_Later.png'),
+       (3, 1, 'Born Sinner', 2013, 3, 'https://upload.wikimedia.org/wikipedia/en/7/73/J._Cole_-_Born_Sinner_cover.png');
 
 ```
 
